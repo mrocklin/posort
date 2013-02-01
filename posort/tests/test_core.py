@@ -1,10 +1,4 @@
-from dagsort import reverse_dict, toposort, posort
-
-
-def test_reverse_dict():
-    d = {'a': (1, 2), 'b': (2, 3), 'c': ()}
-    assert reverse_dict(d) == {1: {'a'}, 2: {'a', 'b'}, 3: {'b'}}
-
+from posort.core import toposort, posort
 
 def test_toposort():
     edges = {1: set((4, 6, 7)), 2: set((4, 6, 7)),
@@ -12,7 +6,6 @@ def test_toposort():
     order = toposort(edges)
     assert not any(a in edges.get(b, ()) for i, a in enumerate(order)
                                          for b    in order[i:])
-
 
 def test_posort_easy():
     nodes = "asdfghjkl"

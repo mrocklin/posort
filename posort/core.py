@@ -1,18 +1,6 @@
 """ Partially ordered sort """
 
-def reverse_dict(d):
-    """ Reverses direction of dependence dict
-
-    >>> reverse_dict({'a': {1, 2}, 'b': {2, 3}, 'c':set()})
-    {1: {'a'}, 2: {'a', 'b'}, 3: {'b'}}
-    """
-    result = {}
-    for key in d:
-        for val in d[key]:
-            if val not in result:
-                result[val] = set()
-            result[val].add(key)
-    return result
+from posort.util import reverse_dict
 
 def toposort(edges):
     """ Topological sort algorithm by Kahn [1] - O(nodes + vertices)
