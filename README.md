@@ -59,6 +59,11 @@ Author
 
 [Matthew Rocklin](http://matthewrocklin.com)
 
+License
+-------
+
+New BSD license. See LICENSE.txt
+
 History
 -------
 
