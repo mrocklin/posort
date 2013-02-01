@@ -31,17 +31,19 @@ prefer even numbers
     >>> sorted([1, 5, 2, 4, 3], cmp=evens_first)
     [4, 2, 5, 1, 3]
 
-Note in the example above that all of even numbers precede all of the odd numbers; `cmp` is satisfied.  Also note that there are several possible solutions.  For example we may want even numbers to precede odd numbers and, given extra freedom, smaller numbers to precede larger ones.
+Note in the example above that all of even numbers precede all of the odd numbers; `evens_first` is satisfied.  Also note that there are several possible solutions.  In this case there are `12` possible solutions that all satisfy the comparator function.  `sorted` returns one at random. 
 
 `posort`
 --------
+
+To obtain the solution `[2, 4, 1, 3, 5]` where numbers are sorted first by evenness and then by magnitude we can use the function `posort`.
 
 The `posort` function attempts to satisfy a sequence of comparator functions of decreasing precedence.
 
     >>> posort([1, 5, 2, 4, 3], evens_first, small_first)
     [2, 4, 1, 3, 5]
 
-The rule for even numbers dominates the rule for small numbers. 
+The rule for even numbers dominates the rule for small numbers.  Any number of comparator functions can be specified.
 
 
 Equivalent structures
