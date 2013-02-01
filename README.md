@@ -52,3 +52,15 @@ A comparator function completely specifies a
 
 A comparator function can describe any 
 [directed acyclic graph (DAG)](http://en.wikipedia.org/wiki/Directed_acyclic_graph)
+
+
+Author
+------
+
+[Matthew Rocklin](http://matthewrocklin.com)
+
+History
+-------
+
+This idea was originally developed for the
+[Theano project](http://github.com/theano/theano) 
